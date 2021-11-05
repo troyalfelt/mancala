@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  height: 500px;
+  width: 1000px;
+}
+
+/* Player and scoreboard displays below */
+
+.player-one-display,
+.player-two-display {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+
+.player-one-display {
+  border: 5px solid #9ddfd3;
+}
+
+.player-two-display {
+  border: 5px solid #ea2c62;
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 125px;
+  margin-bottom: 75px;
+}
+
+#scoreboard-one {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #9ddfd3;
+  padding: 10px;
+}
+
+#scoreboard-two {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #ea2c62;
+  padding: 10px;
+}
+
+#scoreboard-one > p,
+#scoreboard-two > p {
+  font-size: 2.5em;
+}
+
+/* Player and scoreboard displays above */
+
+.board {
+  width: 1000px;
+  height: 500px;
+  background-color: #825959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 0 3%;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-one {
+  border-style: solid;
+  border-color: #9ddfd3;
+}
+
+.side-two {
+  margin-top: 70px;
+  border-style: solid;
+  border-color: #ea2c62;
+}
+
+.side-one,
+.side-two {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* these are the pockets */
+.side-one > div,
+.side-two > div {
+  width: 15%;
+  height: 100%;
+  background-color: #a07676;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+/* Piece display below */
+
+.piece-display-one,
+.piece-display-two {
+  width: 100%;
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.piece-display-one {
+  margin-bottom: 25px;
+}
+
+.piece-display-two {
+  margin-top: 25px;
+}
+
+.piece-display-one > div,
+.piece-display-two > div {
+  width: 15%;
+  height: 100%;
+  border: 2px solid #a07676;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2em;
+  color: #f1ae89;
+}
+
+/* Piece display above */
+
+/* these are the pieces inside the pockets */
+.piece {
+  height: 15px;
+  width: 15px;
+  margin: 2.5px;
+  border-radius: 100%;
+  background-color: yellow;
+}
+
+.mancala-one,
+.mancala-two {
+  margin: 0 2.5%;
+  width: 10%;
+  height: 65%;
+  border: 1px solid black;
+  background-color: #a07676;
+  border-radius: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mancala-one {
+  border: 3px solid #9ddfd3;
+}
+
+.mancala-two {
+  border: 3px solid #ea2c62;
+}
+
+.winnerContainerDiv {
+  margin: 50px;
+}
+
+.playAgainDivs {
+  font-size: 2em;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+}
+
+#vet-button {
+  margin-top: 10px;
+  border-style: solid;
+  padding: 7px;
+  font-size: 1.3em;
+}
+
+a {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
+  a {
+    position: absolute;
+    top: 25px;
+    font-size: 1.5em;
+  }
+
+  #vet-button {
+    position: absolute;
+    top: 55px;
+  }
+
+  .winnerContainerDiv {
+    position: absolute;
+    top: 385px;
+    left: calc(50% - 250px);
+    z-index: 1;
+    width: 500px;
+    height: auto;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 90%;
+  }
+
+  .playAgainDivs:first-child,
+  .playAgainDivs:last-child {
+    width: 150px;
+    height: 150px;
+  }
+
+  .playAgainDivs:nth-child(2n + 2) {
+    width: 200px;
+    height: 150px;
+  }
+
+  #scoreboard {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 250px;
+    margin-top: -28px;
+  }
+
+  #scoreboard > div {
+    width: 500px;
+  }
+
+  #scoreboard-one,
+  #scoreboard-two {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main {
+    transform: rotate(90deg);
+  }
+
+  .piece-display-one > div p,
+  .piece-display-two > div p {
+    transform: rotate(270deg);
+    padding: 0 20px;
+  }
+}
